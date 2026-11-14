@@ -5,8 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>CV — Ahmad Nurul Wafa | Full Stack Developer &amp; Desain Grafis</title>
-  <meta name="description" content="Portfolio Ahmad Nurul Wafa — Full Stack Developer & Desain Grafis dari Pati, Jawa Tengah.">
+  <title>Portfolio — Ahmad Nurul Wafa | Full Stack Developer &amp; Desain Grafis</title>
+  <meta name="description" content="Portfolio Ahmad Nurul Wafa - Full Stack Developer & Graphic Designer.">
+  <meta name="keywords" content="portfolio, ahmad nurul wafa, full stack developer, graphic designer, web development">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -92,9 +93,9 @@
     #navigation { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 20px 0; transition: background .35s, padding .35s, box-shadow .35s, border .35s; }
     #navigation.scrolled { padding: 12px 0; background: rgba(6, 33, 30, .84); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 12px 34px rgba(4, 30, 27, .28); border-bottom: 1px solid rgba(94, 234, 212, .14); }
     .nav-wrap { display: flex; align-items: center; justify-content: space-between; }
-    .logo { display: flex; align-items: center; gap: 12px; font-family: var(--font-head); font-weight: 700; color: #fff; font-size: 1.1rem; line-height: 1.15; }
-    .logo-badge { width: 42px; height: 42px; border-radius: 12px; background: var(--grad); display: grid; place-items: center; color: #fff; font-weight: 800; font-size: .95rem; box-shadow: 0 8px 20px -6px rgba(20, 184, 166, .7); flex-shrink: 0; }
-    .logo small { display: block; font-size: .6rem; letter-spacing: 2.2px; color: var(--mint); font-weight: 500; text-transform: uppercase; }
+    .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-weight: 700; color: #fff; font-size: 1.15rem; }
+    .brand-dot { width: 11px; height: 11px; border-radius: 50%; background: var(--grad); box-shadow: 0 0 12px var(--tosca-bright); flex-shrink: 0; }
+    .brand .accent-dot { color: var(--tosca-bright); }
     .nav-links { display: flex; align-items: center; gap: 4px; }
     .nav-link { position: relative; display: block; padding: 9px 16px; color: #cfe9e4; font-weight: 500; font-size: .9rem; border-radius: 999px; transition: .3s; }
     .nav-link:hover { color: #fff; }
@@ -184,8 +185,8 @@
     .info-item strong { color: var(--ink); font-weight: 600; }
 
     /* ================= Stats band ================= */
-    .stats-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 70px; }
-    .stat-card { background: #fff; border: 1px solid #e1f0ec; border-radius: 20px; padding: 28px; display: flex; align-items: center; gap: 18px; box-shadow: 0 18px 40px -28px rgba(13, 148, 136, .35); transition: .3s; position: relative; overflow: hidden; }
+    .stats-band { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 70px; }
+    .stat-card { flex: 0 1 340px; min-width: 280px; background: #fff; border: 1px solid #e1f0ec; border-radius: 20px; padding: 28px; display: flex; align-items: center; gap: 18px; box-shadow: 0 18px 40px -28px rgba(13, 148, 136, .35); transition: .3s; position: relative; overflow: hidden; }
     .stat-card::after { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--grad); }
     .stat-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -24px rgba(13, 148, 136, .5); }
     .stat-icon { width: 54px; height: 54px; border-radius: 14px; background: rgba(20, 184, 166, .1); color: var(--tosca-2); display: grid; place-items: center; font-size: 1.4rem; flex-shrink: 0; }
@@ -204,7 +205,7 @@
 
     /* ================= Resume ================= */
     #resume { background: #fff; }
-    .resume-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .resume-grid { display: block; max-width: 860px; margin-inline: auto; }
     .resume-title { font-family: var(--font-head); font-size: 1.3rem; color: var(--ink); display: flex; align-items: center; gap: 12px; margin-bottom: 28px; font-weight: 700; }
     .resume-title i { width: 44px; height: 44px; border-radius: 12px; background: var(--grad); color: #fff; display: grid; place-items: center; font-size: 1.1rem; box-shadow: 0 10px 22px -8px rgba(20, 184, 166, .6); flex-shrink: 0; }
     .timeline { position: relative; padding-left: 30px; }
@@ -219,6 +220,9 @@
     .t-year { font-size: .72rem; font-weight: 700; color: var(--tosca-3); background: rgba(20, 184, 166, .12); padding: 4px 12px; border-radius: 99px; letter-spacing: .5px; white-space: nowrap; }
     .t-card h5 { font-size: .8rem; color: var(--tosca-2); font-weight: 600; margin-top: 2px; }
     .t-card p { font-size: .88rem; margin-top: 8px; }
+    .t-card ul { list-style: none; padding: 0; margin: 10px 0 0; }
+    .t-card ul li { padding: 5px 0 5px 22px; position: relative; font-size: .88rem; color: var(--body-c); }
+    .t-card ul li::before { content: ''; position: absolute; left: 4px; top: 14px; width: 6px; height: 6px; border-radius: 50%; background: var(--tosca); box-shadow: 0 0 0 3px rgba(20, 184, 166, .15); }
 
     /* ================= Services ================= */
     #services { background: var(--light); }
@@ -360,7 +364,7 @@
   <div id="preloader">
     <div class="loader-box">
       <div class="loader-ring"></div>
-      <div class="loader-text">ANW • PORTFOLIO</div>
+      <div class="loader-text">NRLWAFFAA_</div>
     </div>
   </div>
 
@@ -369,10 +373,7 @@
   <!-- ======= Navbar ======= -->
   <nav id="navigation">
     <div class="container nav-wrap">
-      <a href="#header" class="logo">
-        <span class="logo-badge">ANW</span>
-        <span>Ahmad Nurul Wafa<small>Full Stack Developer</small></span>
-      </a>
+      <a href="#header" class="brand"><span class="brand-dot"></span> Nrlwaffaa_<span class="accent-dot">.</span></a>
       <ul class="nav-links">
         <li><a class="nav-link active" href="#header">Home</a></li>
         <li><a class="nav-link" href="#about">About</a></li>
@@ -410,10 +411,10 @@
 
     <div class="container hero-grid">
       <div class="hero-content">
-        <span class="hero-badge"><span class="pulse-dot"></span> Tersedia untuk Freelance</span>
-        <h1 class="hero-title">Halo, Saya<br><span class="grad">Ahmad Nurul Wafa</span></h1>
+        <span class="hero-badge"><span class="pulse-dot"></span> Available for freelance &amp; collaboration</span>
+        <h1 class="hero-title">Hi, Saya<br><span class="grad">Ahmad Nurul Wafa</span></h1>
         <div class="hero-typed">Saya Adalah Seorang <span id="typed"></span></div>
-        <p class="hero-desc">Lulusan Teknik Informatika Universitas Muria Kudus (2024) — berpengalaman sebagai IT Support &amp; Full Stack Developer di Klinik Multisari II Jepara, serta Desain Grafis yang mahir menggunakan CorelDraw.</p>
+        <p class="hero-desc">Seorang profesional dengan keahlian di bidang web development dan desain grafis. Solutif, teliti, dan antusias untuk berkembang bersama perusahaan Anda.</p>
         <div class="hero-cta">
           <a href="#portfolio" class="btn btn-primary"><i class="bi bi-collection"></i> Lihat Portfolio</a>
           <a href="#contact" class="btn btn-ghost"><i class="bi bi-envelope"></i> Hubungi Saya</a>
@@ -434,7 +435,7 @@
             <img src="assets/img/me.jpg" alt="Ahmad Nurul Wafa" class="hero-avatar">
             <div>
               <h3>Ahmad Nurul Wafa</h3>
-              <p>Pati, Jawa Tengah, Indonesia</p>
+              <p>Jawa Tengah, Indonesia</p>
             </div>
           </div>
           <div class="chips">
@@ -443,7 +444,7 @@
             <span class="chip">PHP</span>
             <span class="chip">JavaScript</span>
             <span class="chip">CorelDraw</span>
-            <span class="chip">MS Office</span>
+            <span class="chip">Node.js</span>
           </div>
           <div class="hero-stats">
             <div class="hstat"><b class="grad">32+</b><span>Projects Selesai</span></div>
@@ -461,26 +462,27 @@
     <div class="container">
 
       <div class="sec-head" data-reveal>
-        <span class="sec-tag">WELCOME</span>
-        <h2 class="sec-title">About <span class="grad">Me</span></h2>
-        <p class="sec-sub">Kenali saya lebih dekat — latar belakang, keahlian, dan apa yang saya kerjakan.</p>
+        <span class="sec-tag">ABOUT</span>
+        <h2 class="sec-title">Tentang <span class="grad">Saya</span></h2>
       </div>
 
       <div class="about-grid">
         <div class="about-photo" data-reveal="left">
           <img src="assets/img/me.jpg" alt="Foto Ahmad Nurul Wafa">
-          <div class="otw"><i class="bi bi-patch-check-fill"></i> Open to Work</div>
+          <div class="otw"><i class="bi bi-briefcase-fill"></i> 5+ Tahun Pengalaman</div>
         </div>
         <div class="about-content" data-reveal="right">
-          <h3>Full Stack Developer &amp; Graphic Designer</h3>
-          <p class="lead">Saya Ahmad Nurul Wafa, Lulusan Teknik Informatika, Universitas Muria Kudus (2024), dengan pengalaman sebagai IT Support dan pengembangan aplikasi di Klinik Multisari II Jepara. Pernah magang sebagai Staff Administrasi di Fakultas Teknik UMK. Mahir menggunakan CorelDraw serta Microsoft Office. Dikenal sebagai individu yang disiplin, teliti, tekun, jujur, dan memiliki kemampuan komunikasi yang baik. Memiliki minat kuat di bidang teknologi dan siap untuk berkembang lebih lanjut.</p>
+          <h3>Full Stack Developer &amp; <span class="grad">Graphic Designer</span></h3>
+          <p class="lead">Saya Ahmad Nurul Wafa, seorang profesional di bidang teknologi informasi dengan ketertarikan pada pengembangan website, desain grafis, dan pengelolaan sistem digital. Saya senang mengeksplorasi ide, mengembangkan solusi berbasis teknologi, serta menciptakan karya yang fungsional dan bermanfaat.</p>
           <div class="info-grid">
-            <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Tgl Lahir:</strong> 04 September 2002</span></div>
+            <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Profesi:</strong> Full Stack Developer &amp; Graphic Designer</span></div>
             <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Email:</strong> nurulwafa473@gmail.com</span></div>
-            <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Website:</strong> www.ahmadnurulwafa.skom</span></div>
+            <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Status:</strong> Tersedia untuk Freelance</span></div>
+            <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Spesialisasi:</strong> Web Development &amp; Desain Grafis</span></div>
+            <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Lokasi:</strong> Jawa Tengah, Indonesia</span></div>
             <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Freelance:</strong> Tersedia</span></div>
-            <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Contact:</strong> 0857-1206-5224</span></div>
-            <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Tempat Tinggal:</strong> Pati, Jawa Tengah</span></div>
+            <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Pengalaman:</strong> 5+ Tahun</span></div>
+            <div class="info-item"><i class="bi bi-chevron-right"></i><span><strong>Fokus:</strong> Solusi Digital Kreatif</span></div>
           </div>
         </div>
       </div>
@@ -494,27 +496,13 @@
             <p>Projects</p>
           </div>
         </div>
-        <div class="stat-card" data-reveal style="--d:.1s">
-          <div class="stat-icon"><i class="bi bi-briefcase"></i></div>
-          <div>
-            <div class="stat-num">2018—2024</div>
-            <p>Berkarya di dunia kerja &amp; proyek</p>
-          </div>
-        </div>
-        <div class="stat-card" data-reveal style="--d:.2s">
-          <div class="stat-icon"><i class="bi bi-patch-check"></i></div>
-          <div>
-            <div class="stat-num">Tersedia</div>
-            <p>Untuk Freelance &amp; Kolaborasi</p>
-          </div>
-        </div>
       </div><!-- End Counts -->
 
       <!-- ======= Skills ======= -->
       <div class="skills-block">
         <div class="sec-head" data-reveal>
-          <span class="sec-tag">KEAHLIAN</span>
-          <h2 class="sec-title">My <span class="grad">Skills</span></h2>
+          <span class="sec-tag">SKILLS</span>
+          <h2 class="sec-title">Keahlian <span class="grad">Teknis</span></h2>
         </div>
         <div class="skills-grid">
           <div class="skill">
@@ -522,8 +510,8 @@
             <div class="track"><div class="fill" data-val="90"></div></div>
           </div>
           <div class="skill">
-            <div class="skill-head"><span>PHP</span><span class="skill-val" data-val="80">0%</span></div>
-            <div class="track"><div class="fill" data-val="80"></div></div>
+            <div class="skill-head"><span>PHP</span><span class="skill-val" data-val="90">0%</span></div>
+            <div class="track"><div class="fill" data-val="90"></div></div>
           </div>
           <div class="skill">
             <div class="skill-head"><span>CSS</span><span class="skill-val" data-val="70">0%</span></div>
@@ -534,12 +522,12 @@
             <div class="track"><div class="fill" data-val="80"></div></div>
           </div>
           <div class="skill">
-            <div class="skill-head"><span>JavaScript</span><span class="skill-val" data-val="40">0%</span></div>
-            <div class="track"><div class="fill" data-val="40"></div></div>
+            <div class="skill-head"><span>JavaScript</span><span class="skill-val" data-val="80">0%</span></div>
+            <div class="track"><div class="fill" data-val="80"></div></div>
           </div>
           <div class="skill">
-            <div class="skill-head"><span>MS Office</span><span class="skill-val" data-val="95">0%</span></div>
-            <div class="track"><div class="fill" data-val="95"></div></div>
+            <div class="skill-head"><span>Node.js</span><span class="skill-val" data-val="75">0%</span></div>
+            <div class="track"><div class="fill" data-val="75"></div></div>
           </div>
         </div>
       </div><!-- End Skills -->
@@ -547,87 +535,80 @@
     </div>
   </section><!-- End About Section -->
 
-  <!-- ======= Resume Section ======= -->
+  <!-- ======= Resume Section (Pengalaman Kerja) ======= -->
   <section id="resume" class="resume">
     <div class="container">
 
       <div class="sec-head" data-reveal>
-        <span class="sec-tag">WELCOME</span>
-        <h2 class="sec-title">My <span class="grad">Resume</span></h2>
-        <p class="sec-sub">Perjalanan pendidikan dan pengalaman kerja saya dari tahun ke tahun.</p>
+        <span class="sec-tag">RESUME</span>
+        <h2 class="sec-title">Pengalaman <span class="grad">Kerja</span></h2>
       </div>
 
       <div class="resume-grid">
-        <div data-reveal="left">
-          <h3 class="resume-title"><i class="bi bi-briefcase-fill"></i> Experience</h3>
+        <div>
           <div class="timeline">
             <div class="t-item">
               <div class="t-card">
-                <div class="t-top"><h4>AHHAS KEMBANG JAYA MOTOR KEDIRI</h4><span class="t-year">2018</span></div>
-                <h5>Siswa Magang — Ahhas Honda Kediri</h5>
-                <p>Sebagai siswa magang di Ahhas Honda Kediri.</p>
+                <div class="t-top"><h4>Programmer &amp; Maintenance</h4><span class="t-year">2024 — Sekarang</span></div>
+                <h5>BMT FASTABIQ PATI</h5>
+                <ul>
+                  <li>Bertanggung jawab sebagai Programmer &amp; Maintenance sistem</li>
+                  <li>Mengelola dan mengembangkan aplikasi serta infrastruktur IT internal</li>
+                  <li>Memastikan kelancaran operasional sistem dan melakukan perawatan berkala</li>
+                </ul>
               </div>
             </div>
             <div class="t-item">
               <div class="t-card">
-                <div class="t-top"><h4>AKHTAR DESIGN</h4><span class="t-year">2019 — 2021</span></div>
-                <h5>Karyawan — Desain Grafis</h5>
-                <p>Karyawan dan sebagai Desain Grafis.</p>
+                <div class="t-top"><h4>IT Support</h4><span class="t-year">2024</span></div>
+                <h5>PT. MITRA SEJATI KONSTRUKSI</h5>
+                <ul>
+                  <li>Sebagai Tenaga IT (IT Support) yang menangani kebutuhan teknis perusahaan</li>
+                  <li>Melakukan maintenance perangkat keras dan perangkat lunak</li>
+                  <li>Memberikan dukungan teknis kepada seluruh divisi</li>
+                </ul>
               </div>
             </div>
             <div class="t-item">
               <div class="t-card">
-                <div class="t-top"><h4>MAGANG "FAKULTAS TEKNIK UMK"</h4><span class="t-year">2022</span></div>
-                <h5>Mahasiswa Magang — Dekanat Fakultas Teknik UMK</h5>
-                <p>Mahasiswa magang di dekanat fakultas teknik UMK sebagai desain grafis.</p>
+                <div class="t-top"><h4>Full Stack Developer</h4><span class="t-year">2023</span></div>
+                <h5>CV. DIVA SOLUTION</h5>
+                <ul>
+                  <li>Mengembangkan dan mengelola solusi digital sebagai Full Stack Developer</li>
+                  <li>Merancang antarmuka hingga pengembangan sistem backend sesuai kebutuhan pengguna</li>
+                  <li>Mengerjakan proyek Aplikasi Klinik Multisari II Jepara</li>
+                </ul>
               </div>
             </div>
             <div class="t-item">
               <div class="t-card">
-                <div class="t-top"><h4>CV. DIVA SOLUTION</h4><span class="t-year">2023</span></div>
-                <h5>Full Stack Developer</h5>
-                <p>Sebagai Full Stack Developer dengan mengembangkan Aplikasi Klinik Multisari II Jepara.</p>
+                <div class="t-top"><h4>Desain Grafis (Magang)</h4><span class="t-year">2022</span></div>
+                <h5>Fakultas Teknik UMK</h5>
+                <ul>
+                  <li>Bertugas sebagai desain grafis di dekanat fakultas teknik</li>
+                  <li>Membuat materi visual untuk kebutuhan akademik dan promosi fakultas</li>
+                </ul>
               </div>
             </div>
             <div class="t-item">
               <div class="t-card">
-                <div class="t-top"><h4>PT. MITRA SEJATI KONSTRUKSI</h4><span class="t-year">2024</span></div>
-                <h5>Tenaga IT (IT Support)</h5>
-                <p>Sebagai Tenaga IT (IT Support).</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div data-reveal="right">
-          <h3 class="resume-title"><i class="bi bi-mortarboard-fill"></i> Education</h3>
-          <div class="timeline">
-            <div class="t-item">
-              <div class="t-card">
-                <div class="t-top"><h4>UNIVERSITAS MURIA KUDUS</h4><span class="t-year">2020 — 2024</span></div>
-                <h5>Teknik Informatika</h5>
-                <p>Saya membuat keputusan untuk menempuh pendidikan tinggi di Universitas Muria Kudus dengan harapan mendapatkan ilmu yang berharga dan pengalaman yang membangun.</p>
+                <div class="t-top"><h4>Desain Grafis</h4><span class="t-year">2019 — 2021</span></div>
+                <h5>AKHTAR DESIGN</h5>
+                <ul>
+                  <li>Bekerja sebagai karyawan dan desain grafis</li>
+                  <li>Mengerjakan berbagai proyek desain untuk klien</li>
+                  <li>Mengembangkan keterampilan kreatif dan teknis di bidang desain</li>
+                </ul>
               </div>
             </div>
             <div class="t-item">
               <div class="t-card">
-                <div class="t-top"><h4>SMK MANBA'UL HUDA PATI</h4><span class="t-year">2017 — 2020</span></div>
-                <h5>Sekolah Menengah Kejuruan Manba'ul Huda</h5>
-                <p>Saya memutuskan untuk melanjutkan kejenjang menengah ke atas yaitu di SMK Manba'ul Huda, dan masuk ke pondok pesantren "Nurul Anwar" di kabupaten Pati.</p>
-              </div>
-            </div>
-            <div class="t-item">
-              <div class="t-card">
-                <div class="t-top"><h4>SMP AKN MARZUQI PATI</h4><span class="t-year">2014 — 2017</span></div>
-                <h5>Sekolah Menengah Pertama AKN Marzuqi</h5>
-                <p>Saya melanjutkan ke jenjang menengah pertama dari tahun 2014-2017 di SMP AKN Marzuqi.</p>
-              </div>
-            </div>
-            <div class="t-item">
-              <div class="t-card">
-                <div class="t-top"><h4>SDN KEMBANG 01</h4><span class="t-year">2008 — 2014</span></div>
-                <h5>Sekolah Dasar Negeri Kembang 01</h5>
-                <p>Saya masuk sekolah dasar pada tahun 2008 dan lulus tahun 2014 di SDN Kembang 01.</p>
+                <div class="t-top"><h4>Siswa Magang</h4><span class="t-year">2018</span></div>
+                <h5>AHHAS KEMBANG JAYA MOTOR KEDIRI</h5>
+                <ul>
+                  <li>Magang di Ahhas Honda Kediri</li>
+                  <li>Mempelajari operasional bengkel dan pelayanan pelanggan</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -688,9 +669,8 @@
     <div class="container">
 
       <div class="sec-head" data-reveal>
-        <span class="sec-tag">MY WORKS</span>
-        <h2 class="sec-title">My <span class="grad">Portfolio</span></h2>
-        <p class="sec-sub">Kumpulan karya desain grafis dan project yang pernah saya kerjakan.</p>
+        <span class="sec-tag">PORTFOLIO</span>
+        <h2 class="sec-title">My <span class="grad">Works</span></h2>
       </div>
 
       <div class="pf-filters" data-reveal>
@@ -848,8 +828,8 @@
   <!-- ======= Footer ======= -->
   <footer>
     <div class="container foot-wrap">
-      <p>© <span id="year"></span> <strong>Ahmad Nurul Wafa</strong> — Full Stack Developer &amp; Desain Grafis</p>
-      <p>Dibuat dengan <i class="bi bi-heart-fill" style="color:#f43f5e"></i> · <a href="https://www.instagram.com/nrlwaffaa_/" target="_blank" rel="noopener">@nrlwaffaa_</a></p>
+      <p>© <span id="year"></span> — Portfolio</p>
+      <p><a href="https://www.instagram.com/nrlwaffaa_/" target="_blank" rel="noopener">@nrlwaffaa_</a></p>
     </div>
   </footer>
 
@@ -939,7 +919,7 @@
     $$('[data-reveal]').forEach(el => rev.observe(el));
 
     /* ===== Efek ketik (typed) di hero ===== */
-    const roles = ['Desain Grafis', 'Full Stack Developer', 'IT Support'];
+    const roles = ['Desain Grafis', 'Full Stack Developer', 'UI/UX Designer', 'IT Support'];
     const typedEl = $('#typed');
     let ri = 0, ci = 0, del = false;
     (function type() {
