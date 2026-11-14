@@ -43,8 +43,8 @@
 
     /* ================= Base ================= */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
-    body { font-family: var(--font-body); background: var(--light); color: var(--body-c); line-height: 1.7; overflow-x: hidden; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; overflow-x: hidden; overflow-x: clip; }
+    body { font-family: var(--font-body); background: var(--light); color: var(--body-c); line-height: 1.7; overflow-x: hidden; overflow-x: clip; }
     body.no-scroll { overflow: hidden; }
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
@@ -118,7 +118,7 @@
     .mm-social { display: flex; gap: 14px; margin-top: 26px; }
 
     /* ================= Hero ================= */
-    #header { min-height: 100vh; display: flex; align-items: center; background: linear-gradient(155deg, #04201c 0%, #093831 48%, #0e5f54 100%); overflow: hidden; padding: 140px 0 100px; color: #e7f7f3; }
+    #header { position: relative; min-height: 100vh; display: flex; align-items: center; background: linear-gradient(155deg, #04201c 0%, #093831 48%, #0e5f54 100%); overflow: hidden; padding: 140px 0 100px; color: #e7f7f3; }
     #header::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(94, 234, 212, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(94, 234, 212, .05) 1px, transparent 1px); background-size: 46px 46px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%); }
     .blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .55; pointer-events: none; }
     .blob-1 { width: 420px; height: 420px; background: rgba(20, 184, 166, .5); top: -120px; right: -80px; animation: drift 9s ease-in-out infinite alternate; }
@@ -329,28 +329,59 @@
       #nav-toggle { display: grid; }
       #header { display: block; min-height: 0; padding: 130px 0 70px; }
       .scroll-down { display: none; }
-      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 44px; }
       .about-grid { grid-template-columns: 1fr; gap: 44px; }
-      .resume-grid { grid-template-columns: 1fr; }
       .srv-grid { grid-template-columns: repeat(2, 1fr); }
       .pf-grid { grid-template-columns: repeat(2, 1fr); }
-      .stats-band { grid-template-columns: 1fr 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
-      section { padding: 80px 0; }
+      section { padding: 78px 0; }
+      .sec-head { margin-bottom: 46px; }
     }
     @media (max-width: 576px) {
-      .skills-grid { grid-template-columns: 1fr; }
-      .srv-grid { grid-template-columns: 1fr; }
-      .pf-grid { grid-template-columns: 1fr; }
-      .stats-band { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .info-grid { grid-template-columns: 1fr; }
+      section { padding: 62px 0; }
+      #header { padding: 112px 0 64px; }
+      .hero-grid { gap: 36px; }
+      .hero-badge { font-size: .74rem; padding: 8px 14px; }
+      .hero-desc { font-size: .9rem; }
+      .hero-cta { gap: 12px; margin-top: 26px; }
       .hero-cta .btn { width: 100%; justify-content: center; }
+      .hero-socials { justify-content: center; margin-top: 26px; }
+      .hero-card { padding: 24px 20px; border-radius: 20px; }
+      .hero-avatar { width: 72px; height: 72px; }
+      .hero-card-top { gap: 14px; }
+      .chips { gap: 8px; margin-top: 18px; }
+      .chip { padding: 7px 13px; font-size: .74rem; }
+      .hero-stats { gap: 10px; margin-top: 20px; }
+      .hstat { padding: 13px 14px; }
+      .hstat b { font-size: 1.3rem; }
       .float-tag { display: none; }
-      .otw { left: 12px; }
+      .brand { font-size: 1.02rem; }
+      .skills-grid { grid-template-columns: 1fr; gap: 20px; }
+      .srv-grid { grid-template-columns: 1fr; }
+      .pf-grid { grid-template-columns: 1fr; gap: 16px; }
+      .stats-band { margin-top: 48px; }
+      .stat-card { flex: 1 1 100%; min-width: 0; padding: 22px; }
+      .about-photo::before { top: 14px; right: 8px; bottom: -14px; left: 14px; }
+      .about-photo::after { top: -8px; right: 4px; width: 88px; height: 88px; }
+      .otw { left: 12px; bottom: 16px; padding: 10px 14px; font-size: .78rem; }
+      .about-content h3 { font-size: 1.3rem; }
+      .info-grid { grid-template-columns: 1fr; gap: 2px; margin-top: 20px; }
+      .t-card { padding: 18px 16px; }
+      .t-card ul li { font-size: .85rem; }
+      .form-card { padding: 24px 18px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .lb-close { top: 14px; right: 14px; }
       .lb-prev { left: 10px; }
       .lb-next { right: 10px; }
-      .form-card { padding: 26px; }
+      #lb-img { max-height: 60vh; }
+      #backtop { right: 14px; bottom: 14px; }
+      .foot-wrap { justify-content: center; text-align: center; }
+    }
+    @media (min-width: 577px) and (max-width: 992px) {
+      .ft-1 { left: -6px; }
+      .ft-2 { right: -6px; }
+      .about-photo::before { right: -12px; bottom: -16px; }
+      .about-photo::after { right: -4px; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -792,35 +823,11 @@
             <div class="info-icon"><i class="bi bi-telephone"></i></div>
             <div>
               <h3>Call Me</h3>
-              <p><a href="tel:+6285712065224">0857-1206-5224</a></p>
+              <p><a href="tel:+6285736021778">0857-3602-1778</a></p>
             </div>
           </div>
-          <a class="btn wa-btn" href="https://wa.me/6285712065224" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Chat via WhatsApp</a>
+          <a class="btn wa-btn" href="https://wa.me/6285736021778" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Chat via WhatsApp</a>
         </div>
-
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form form-card" data-reveal="right">
-          <div class="form-row">
-            <div class="form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-          </div>
-          <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Send Message</button></div>
-        </form>
-      </div>
 
     </div>
   </section><!-- End Contact Section -->
